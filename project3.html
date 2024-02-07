@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traveling</title>
+    <style>
+      body {
+        text-align: center;
+        margin: 0 auto;
+        font-family: sans-serif;
+        color: #008a91;
+        background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+        width: 1000px;
+      }
+
+      h2 {
+        font-size: 20px;
+        font-weight: normal;
+      }
+      hr {
+        margin: 0 200px;
+      }
+
+      p {
+        padding: 20px 15px;
+        margin: 16px 200px;
+        background-color: #f1f1f1;
+        border-radius: 10px;
+        line-height: 32px;
+      }
+
+      img {
+        width: 600px;
+        display: block;
+        margin: 0 auto;
+        border-radius: 10px;
+        border: solid black;
+      }
+
+      h3 {
+        text-decoration: underline;
+        font-weight: normal;
+      }
+
+      ul {
+        padding: 0px;
+        list-style-type: none;
+      }
+
+      li {
+        line-height: 32px;
+      }
+
+      button {
+        background: #49beb7;
+        border: dashed yellow;
+        color: white;
+        box-shadow: 5px 5px 20px rgb(111, 109, 109);
+        padding: 20px;
+        margin: 20px;
+        border-radius: 10px;
+        transition: all 200ms ease-in-out;
+      }
+
+      button:hover {
+        color: #49beb7;
+        background: white;
+        border: dashed yellow;
+        cursor: pointer;
+      }
+
+      .drastically {
+        font-style: italic;
+      }
+
+      .benefits {
+        background-color: #f1f1f1;
+        padding: 5px 15px;
+        margin: 16px 200px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Get out there and travel! 🌏</h1>
+    <hr />
+    <h2>You won't regret it</h2>
+    <hr />
+    <p>
+      Traveling helps you see the world in a <strong>whole new way</strong>.
+      Traveling to a different country means exploring new cultures and new
+      ideas that can <span class="drastically">drastically</span> shift your way
+      of thinking and interacting with the world. It breaks down barriers,
+      builds understanding, and connects people in unique ways.
+    </p>
+
+    <img
+      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/319/original/travel.jpeg?1693540292"
+      alt="travelPhoto"
+    />
+    <div class="benefits">
+      <h3>Benefits of traveling</h3>
+      <ul>
+        <em>
+          <li>Achieve peace of mind</li>
+          <li>Enhance your creativity</li>
+          <li>Improve your communication skills</li>
+          <li>Broaden your horizons</li>
+          <li>Boost your confidence</li>
+          <li>Get real-life education</li>
+          <li>Make memories</li>
+          <li>Understand yourself</li></em
+        >
+      </ul>
+    </div>
+    <a
+      href="https://www.nationalgeographic.com/travel/article/why-travel-should-be-considered-an-essential-human-activity"
+      target="blank"
+      >Find out more about the importance of travel
+    </a>
+    <br />
+    <button>BOOK IN YOUR NEXT TRIP</button>
+    <script>
+      function bookUser() {
+        let name = prompt("What is your name?");
+        let age = prompt("How old are you?");
+        let email = prompt("What is your email?");
+        let destination = prompt("Where would you like to travel?");
+
+        if (age >= 18) {
+          alert(
+            "Hi " +
+              name +
+              ", we will be in touch soon about your trip to " +
+              destination +
+              "! ✈️"
+          );
+        } else {
+          alert(
+            "Sorry " +
+              name +
+              ", you are too young to travel with us 🥺 Come back when you are 18!"
+          );
+        }
+      }
+
+      let button = document.querySelector("button");
+      button.addEventListener("click", bookUser);
+    </script>
+  </body>
+</html>
